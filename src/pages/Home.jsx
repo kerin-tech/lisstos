@@ -50,8 +50,8 @@ export default function Home() {
           <div className={styles.heroContent}>
             <div className={styles.heroBadge}>Seguridad · Salud · Gestión Empresarial</div>
             <h1 className={styles.heroTitle}>
-              Seguridad que <span className={styles.heroItalic}>inspira</span>,<br />
-              calidad que <span className={styles.heroItalic}>transforma</span>
+              Seguridad que inspira,<br />
+              calidad que transforma
             </h1>
             <p className={styles.heroSub}>
               En LISSTOS HSEQ S.A.S. diseñamos e implementamos sistemas que transforman entornos laborales en espacios seguros, sostenibles y productivos.
@@ -62,22 +62,6 @@ export default function Home() {
               </Link>
               <div className={styles.heroLocation}>
                 <MapPin size={16} /> Palmira, Colombia
-              </div>
-            </div>
-            <div className={styles.heroStats}>
-              <div className={styles.heroStat}>
-                <span className={styles.heroStatValue}>15+</span>
-                <span className={styles.heroStatLabel}>Años de experiencia</span>
-              </div>
-              <div className={styles.heroStatDot} />
-              <div className={styles.heroStat}>
-                <span className={styles.heroStatValue}>100%</span>
-                <span className={styles.heroStatLabel}>Resultados medibles</span>
-              </div>
-              <div className={styles.heroStatDot} />
-              <div className={styles.heroStat}>
-                <span className={styles.heroStatValue}>150+</span>
-                <span className={styles.heroStatLabel}>Empresas aliadas</span>
               </div>
             </div>
           </div>

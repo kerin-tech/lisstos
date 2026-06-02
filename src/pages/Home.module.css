@@ -55,12 +55,6 @@
   line-height: 1.12;
 }
 
-.heroItalic {
-  font-weight: 300;
-  font-style: italic;
-  color: var(--color-accent);
-}
-
 .heroSub {
   color: var(--color-white-70);
   font-size: 18px;
@@ -73,7 +67,6 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 48px;
 }
 
 .btnPrimary {
@@ -103,35 +96,6 @@
   gap: 8px;
   color: rgba(255,255,255,0.50);
   font-size: 14px;
-}
-
-.heroStats {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-top: 32px;
-  border-top: 1px solid rgba(255,255,255,0.12);
-}
-
-.heroStat {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.heroStatValue {
-  font-weight: 700;
-  font-size: 26px;
-  color: var(--color-white);
-}
-
-.heroStatLabel {
-  font-size: 13px;
-  color: var(--color-white-70);
-}
-
-.heroStatDot {
-  display: none;
 }
 
 .scrollDown {
@@ -652,23 +616,6 @@
 
 /* ===== RESPONSIVE ===== */
 @media (min-width: 640px) {
-  .heroStats {
-    flex-direction: row;
-    gap: 0;
-  }
-  .heroStat {
-    padding: 0 32px;
-  }
-  .heroStat:first-child { padding-left: 0; }
-  .heroStat:last-child { padding-right: 0; }
-  .heroStatDot {
-    display: block;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: rgba(255,255,255,0.30);
-    align-self: center;
-  }
   .statsGrid {
     grid-template-columns: repeat(3, 1fr);
   }
