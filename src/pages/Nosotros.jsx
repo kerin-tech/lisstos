@@ -1,4 +1,4 @@
-import { Target, Eye, Star, Shield, Zap, Heart, CheckCircle2, Download } from 'lucide-react';
+import { Target, Eye, Star, Shield, Zap, Heart, CheckCircle2, Download, Quote } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import SectionLabel from '../components/ui/SectionLabel';
 import styles from './Nosotros.module.css';
@@ -20,18 +20,47 @@ const policyItems = [
 
 export default function Nosotros() {
   const refMV = useScrollReveal();
-  const refVal = useScrollReveal();
-  const refPol = useScrollReveal();
+  const refTeam = useScrollReveal();
 
   return (
     <section className={`section ${styles.page}`}>
       <div className="container">
         <div className={styles.header}>
           <SectionLabel>SOBRE NOSOTROS</SectionLabel>
-          <h1 className={styles.title}>Comprometidos con el bienestar laboral</h1>
+          <h1 className={styles.title}>Comprometidos con el bienestar laboral, impulsando la eficiencia empresarial</h1>
           <p className={styles.subtitle}>
-            LISSTOS HSEQ S.A.S. nació en Palmira, corazón empresarial del Valle del Cauca, con una visión clara: impulsar el crecimiento de las organizaciones a través de soluciones en Seguridad, Salud Ocupacional y Gestión Empresarial que generen bienestar real y vínculos de confianza.
+            LISSTOS HSEQ S.A.S. nació en Palmira, Valle del Cauca, con una visión clara: impulsar el crecimiento de las organizaciones a través de soluciones en Seguridad, Salud Ocupacional y Gestión Empresarial que generen bienestar real y vínculos de confianza.
           </p>
+        </div>
+
+        <div ref={refTeam} className={`${styles.teamSection} reveal`}>
+          <div className={styles.teamImageCol}>
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80"
+              alt="Equipo LISSTOS"
+              className={styles.teamImage}
+            />
+          </div>
+          <div className={styles.teamContent}>
+            <h2 className={styles.teamTitle}>Un equipo multidisciplinario apasionado por la seguridad</h2>
+            <p className={styles.teamText}>
+              Contamos con profesionales en Seguridad y Salud en el Trabajo, Ingeniería Industrial, Psicología Organizacional y Gestión Empresarial. Creemos en el poder de la prevención y en el valor de construir relaciones de confianza con cada uno de nuestros aliados.
+            </p>
+            <div className={styles.teamStats}>
+              <div>
+                <span className={styles.teamStatValue}>15+</span>
+                <span className={styles.teamStatLabel}>Años de experiencia</span>
+              </div>
+              <div>
+                <span className={styles.teamStatValue}>150+</span>
+                <span className={styles.teamStatLabel}>Empresas aliadas</span>
+              </div>
+              <div>
+                <span className={styles.teamStatValue}>4</span>
+                <span className={styles.teamStatLabel}>Departamentos</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div ref={refMV} className={`${styles.mvGrid} reveal`}>
@@ -52,8 +81,8 @@ export default function Nosotros() {
         </div>
 
         <div className={styles.valSection}>
-          <h2 className={styles.sectionTitle}>Nuestros Valores</h2>
-          <div ref={refVal} className={`${styles.valGrid} reveal`}>
+          <SectionLabel>NUESTROS VALORES</SectionLabel>
+          <div className={styles.valGrid}>
             {valores.map((v, i) => {
               const Icon = v.icon;
               return (
@@ -66,7 +95,7 @@ export default function Nosotros() {
           </div>
         </div>
 
-        <div ref={refPol} className={`${styles.policyBlock} reveal`}>
+        <div className={styles.policyBlock}>
           <div className={styles.policyContent}>
             <h2 className={styles.policyTitle}>Política de Calidad</h2>
             <p className={styles.policyText}>
@@ -84,14 +113,20 @@ export default function Nosotros() {
               <Download size={16} /> Descargar política completa
             </button>
           </div>
-          <div className={styles.policyStats}>
-            <div className={styles.policyStat}>
-              <span className={styles.policyStatValue}>98%</span>
-              <span className={styles.policyStatLabel}>Satisfacción del cliente</span>
+          <div className={styles.policyRight}>
+            <div className={styles.policyQuote}>
+              <Quote size={24} />
+              <p>Nuestro compromiso es asegurar la satisfacción de nuestros clientes mediante la mejora continua y el cumplimiento normativo.</p>
             </div>
-            <div className={styles.policyStat}>
-              <span className={styles.policyStatValue}>100%</span>
-              <span className={styles.policyStatLabel}>Cumplimiento legal</span>
+            <div className={styles.policyStats}>
+              <div className={styles.policyStat}>
+                <span className={styles.policyStatValue}>98%</span>
+                <span className={styles.policyStatLabel}>Satisfacción</span>
+              </div>
+              <div className={styles.policyStat}>
+                <span className={styles.policyStatValue}>100%</span>
+                <span className={styles.policyStatLabel}>Cumplimiento</span>
+              </div>
             </div>
           </div>
         </div>

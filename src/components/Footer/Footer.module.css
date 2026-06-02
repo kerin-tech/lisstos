@@ -1,7 +1,6 @@
 .footer {
-  background-color: var(--color-dark);
+  background-color: var(--color-primary-dark);
   padding-top: 80px;
-  border-top: 3px solid var(--color-accent);
 }
 
 .footerContainer {
@@ -26,38 +25,34 @@
 }
 
 .logoMain {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 24px;
   color: var(--color-white);
   line-height: 1;
 }
 
 .logoSub {
-  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13px;
   color: var(--color-white-70);
   letter-spacing: 1px;
 }
 
 .tagline {
-  font-family: 'Fraunces', serif;
-  font-weight: 300;
+  font-weight: 400;
+  font-style: italic;
   font-size: 14px;
   color: var(--color-white-70);
   margin-bottom: 16px;
 }
 
 .meta {
-  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13px;
   color: rgba(255,255,255,0.50);
   margin-bottom: 4px;
 }
 
 .colTitle {
-  font-family: 'Fraunces', serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   color: var(--color-white);
   margin-bottom: 20px;
@@ -70,8 +65,7 @@
 }
 
 .links a {
-  color: rgba(255,255,255,0.60);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: rgba(255,255,255,0.55);
   font-size: 14px;
 }
 
@@ -89,30 +83,30 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--color-white-12);
+  background-color: rgba(255,255,255,0.10);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-white);
+  transition: all 0.3s ease;
 }
 
 .socialIcon:hover {
   background-color: var(--color-accent);
-  color: var(--color-dark);
-  transform: translateY(-4px);
+  color: var(--color-primary-dark);
+  transform: translateY(-3px);
 }
 
 .bottomBar {
   padding: 24px 0;
-  border-top: 1px solid var(--color-white-12);
+  border-top: 1px solid rgba(255,255,255,0.10);
   text-align: center;
 }
 
 .bottomBar p {
-  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 400;
   font-size: 13px;
-  color: rgba(255,255,255,0.50);
+  color: rgba(255,255,255,0.45);
 }
 
 @media (min-width: 768px) {

@@ -10,13 +10,12 @@
 }
 
 .title {
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 700;
   margin-bottom: 16px;
 }
 
 .subtitle {
-  font-family: 'DM Sans', sans-serif;
   font-size: 17px;
   color: var(--color-text-muted);
   line-height: 1.7;
@@ -29,8 +28,11 @@
 }
 
 .serviceBlock {
-  border-bottom: 1px solid var(--color-border);
   padding-bottom: 48px;
+}
+
+.serviceBlock:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
 }
 
 .svcIntro {
@@ -51,7 +53,6 @@
   display: inline-block;
   background-color: var(--color-bg-alt);
   color: var(--color-primary);
-  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
   font-size: 12px;
   padding: 4px 14px;
@@ -61,14 +62,13 @@
   margin-bottom: 12px;
 }
 
-.svcSubtitle {
-  font-size: 28px;
+.svcTitle {
+  font-size: 26px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
 .svcDesc {
-  font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   color: var(--color-text-muted);
   line-height: 1.7;
@@ -76,7 +76,6 @@
 }
 
 .svcLink {
-  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
   font-size: 15px;
   color: var(--color-primary);
@@ -89,15 +88,21 @@
   gap: 10px;
 }
 
-.svcIconWrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.svcImgWrap {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
 
-.svcBigIcon {
-  color: var(--color-primary);
-  opacity: 0.15;
+.svcImg {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.svcImgWrap:hover .svcImg {
+  transform: scale(1.05);
 }
 
 .subGrid {
@@ -111,12 +116,13 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 24px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: all 0.3s ease;
 }
 
 .subCard:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
 }
 
 .subIcon {
@@ -125,31 +131,75 @@
 }
 
 .subTitle {
-  font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 17px;
   margin-bottom: 6px;
 }
 
 .subDesc {
-  font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   color: var(--color-text-muted);
   line-height: 1.6;
 }
 
+.ctaBanner {
+  margin-top: 64px;
+  background: linear-gradient(135deg, #1A208A 0%, #262EBD 100%);
+  padding: 64px 0;
+}
+
+.ctaInner {
+  text-align: center;
+}
+
+.ctaTitle {
+  color: var(--color-white);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.ctaSub {
+  color: var(--color-white-70);
+  font-size: 17px;
+  margin-bottom: 28px;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px 36px;
+  border-radius: var(--radius-pill);
+  transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
 @media (min-width: 768px) {
   .title {
-    font-size: 44px;
+    font-size: 40px;
   }
   .svcIntro {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
   }
   .subGrid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .svcSubtitle {
-    font-size: 32px;
+  .svcTitle {
+    font-size: 30px;
+  }
+  .ctaTitle {
+    font-size: 34px;
   }
 }
 

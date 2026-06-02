@@ -4,24 +4,83 @@
 }
 
 .header {
-  max-width: 700px;
-  margin: 0 auto 64px;
+  max-width: 720px;
+  margin: 0 auto 56px;
   text-align: center;
 }
 
 .title {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: 16px;
 }
 
 .subtitle {
-  font-family: 'DM Sans', sans-serif;
   font-size: 17px;
   color: var(--color-text-muted);
   line-height: 1.7;
 }
 
+/* TEAM SECTION */
+.teamSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 64px;
+  align-items: center;
+}
+
+.teamImageCol {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.teamImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+
+.teamContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.teamTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.teamText {
+  color: var(--color-text-muted);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.teamStats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.teamStatValue {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-primary);
+  display: block;
+}
+
+.teamStatLabel {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* MV */
 .mvGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -34,6 +93,12 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 36px 32px;
+  transition: all 0.3s ease;
+}
+
+.mvCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .mvIcon {
@@ -48,19 +113,18 @@
 }
 
 .mvText {
-  font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   color: var(--color-text-muted);
   line-height: 1.8;
 }
 
+/* VALUES */
 .valSection {
   margin-bottom: 64px;
 }
 
-.sectionTitle {
-  font-size: 28px;
-  font-weight: 700;
+.valSection > span {
+  display: block;
   text-align: center;
   margin-bottom: 32px;
 }
@@ -81,6 +145,13 @@
   align-items: center;
   gap: 12px;
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.valCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
 }
 
 .valIcon {
@@ -88,19 +159,18 @@
 }
 
 .valLabel {
-  font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-text);
 }
 
+/* POLICY */
 .policyBlock {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, #1A208A 0%, #262EBD 100%);
   border-radius: var(--radius-lg);
   padding: 48px 40px;
   color: var(--color-white);
@@ -120,7 +190,6 @@
 }
 
 .policyText {
-  font-family: 'DM Sans', sans-serif;
   font-size: 16px;
   color: var(--color-white-70);
   line-height: 1.7;
@@ -138,7 +207,6 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   color: var(--color-white-70);
 }
@@ -154,11 +222,11 @@
   gap: 8px;
   background-color: var(--color-accent);
   color: var(--color-dark);
-  font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 14px;
   padding: 12px 24px;
   border-radius: var(--radius-pill);
+  transition: all 0.3s ease;
 }
 
 .downloadBtn:hover {
@@ -166,37 +234,66 @@
   color: var(--color-primary);
 }
 
-.policyStats {
+.policyRight {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.policyQuote {
+  background-color: rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.policyQuote svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.policyQuote p {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--color-white-70);
+  line-height: 1.6;
+}
+
+.policyStats {
+  display: flex;
   gap: 16px;
 }
 
 .policyStat {
-  background-color: var(--color-white-10);
+  flex: 1;
+  background-color: rgba(255,255,255,0.08);
   border-radius: var(--radius-md);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  padding: 20px;
+  text-align: center;
 }
 
 .policyStatValue {
-  font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 28px;
   color: var(--color-white);
+  display: block;
+  margin-bottom: 4px;
 }
 
 .policyStatLabel {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--color-white-70);
 }
 
 @media (min-width: 768px) {
   .title {
-    font-size: 44px;
+    font-size: 40px;
+  }
+  .teamSection {
+    grid-template-columns: 1fr 1fr;
   }
   .mvGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -207,7 +304,7 @@
   .policyBlock {
     grid-template-columns: 2fr 1fr;
   }
-  .sectionTitle {
+  .teamTitle {
     font-size: 32px;
   }
 }
