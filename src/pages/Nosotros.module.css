@@ -1,0 +1,213 @@
+.page {
+  padding-top: 120px;
+  background-color: var(--color-bg);
+}
+
+.header {
+  max-width: 700px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.mvGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.mvCard {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 36px 32px;
+}
+
+.mvIcon {
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.mvTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.mvText {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.valSection {
+  margin-bottom: 64px;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.valGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.valCard {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.valIcon {
+  color: var(--color-primary);
+}
+
+.valLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+}
+
+.policyBlock {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  color: var(--color-white);
+}
+
+.policyContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.policyTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.policyText {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--color-white-70);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.policyList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.policyItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--color-white-70);
+}
+
+.policyIcon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+}
+
+.downloadBtn:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.policyStats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.policyStat {
+  background-color: var(--color-white-10);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.policyStatValue {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--color-white);
+}
+
+.policyStatLabel {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--color-white-70);
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 44px;
+  }
+  .mvGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .valGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .policyBlock {
+    grid-template-columns: 2fr 1fr;
+  }
+  .sectionTitle {
+    font-size: 32px;
+  }
+}

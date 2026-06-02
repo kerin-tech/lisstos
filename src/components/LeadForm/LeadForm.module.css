@@ -1,0 +1,153 @@
+.section {
+  background-color: var(--color-primary);
+}
+
+.formWrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.title {
+  color: var(--color-white);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--color-white-70);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(255,255,255,0.80);
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--color-white-12);
+  border: 1px solid var(--color-white-12);
+  border-radius: var(--radius-sm);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: rgba(255,255,255,0.40);
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.checkboxField {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.checkbox {
+  margin-top: 4px;
+  accent-color: var(--color-accent);
+}
+
+.checkboxLabel {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: var(--color-white-70);
+  line-height: 1.5;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 16px 32px;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: var(--radius-pill);
+}
+
+.submitBtn:hover {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.legal {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: rgba(255,255,255,0.50);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.success {
+  text-align: center;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.successIcon {
+  color: var(--color-accent);
+}
+
+.successTitle {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--color-white);
+}
+
+.successText {
+  color: var(--color-white-70);
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .title {
+    font-size: 36px;
+  }
+}

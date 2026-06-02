@@ -1,0 +1,105 @@
+.servicesSection {
+  background-color: var(--color-bg-soft);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: 18px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 3px solid transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-top-color: var(--color-primary);
+}
+
+.iconCircle {
+  width: 52px;
+  height: 52px;
+  background-color: var(--color-bg-muted);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.cardTitle {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.cardDesc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--color-text-mid);
+  margin-bottom: 24px;
+  flex-grow: 1;
+  line-height: 1.7;
+}
+
+.cardLink {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cardLink:hover {
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title {
+    font-size: 44px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

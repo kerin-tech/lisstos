@@ -1,0 +1,160 @@
+.page {
+  padding-top: 120px;
+  background-color: var(--color-bg);
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 64px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.serviceBlock {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 48px;
+}
+
+.svcIntro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+  align-items: center;
+}
+
+.svcIntroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.svcTag {
+  display: inline-block;
+  background-color: var(--color-bg-alt);
+  color: var(--color-primary);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.svcSubtitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.svcDesc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.svcLink {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.svcLink:hover {
+  gap: 10px;
+}
+
+.svcIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svcBigIcon {
+  color: var(--color-primary);
+  opacity: 0.15;
+}
+
+.subGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.subCard {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.subCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.subIcon {
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.subTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.subDesc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 44px;
+  }
+  .svcIntro {
+    grid-template-columns: 1fr auto;
+  }
+  .subGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .svcSubtitle {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

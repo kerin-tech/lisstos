@@ -1,0 +1,131 @@
+.footer {
+  background-color: var(--color-dark);
+  padding-top: 80px;
+  border-top: 3px solid var(--color-accent);
+}
+
+.footerContainer {
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.logoMain {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.logoSub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: var(--color-white-70);
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--color-white-70);
+  margin-bottom: 16px;
+}
+
+.meta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.50);
+  margin-bottom: 4px;
+}
+
+.colTitle {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links a {
+  color: rgba(255,255,255,0.60);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+}
+
+.links a:hover {
+  color: var(--color-accent);
+  padding-left: 4px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 12px;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-white-12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+.socialIcon:hover {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  transform: translateY(-4px);
+}
+
+.bottomBar {
+  padding: 24px 0;
+  border-top: 1px solid var(--color-white-12);
+  text-align: center;
+}
+
+.bottomBar p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: rgba(255,255,255,0.50);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+  .bottomBar {
+    text-align: left;
+  }
+}
